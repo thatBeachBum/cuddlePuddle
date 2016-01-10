@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome To Cuddle Puddle!</title>
+
+	<style type="text/css">
+		.fieldset{background: lightyellow; border: 10px solid yellow; margin-bottom: 10px; width: 720px}
+		.label{width: 180px; text-align: right; vertical-align: text-top; display: inline-block;}
+		.labelChBox{width: auto;}
+		.rangeText{border: 1px solid black; text-align: center;}
+		.textArea{width: 360px; height: 50px;}
+		label:hover{font-size: 40px}
+	</style>
+
+</head>
+
+<h1>Welcome to Cuddle Puddle!</h1>
+
+<h2>Please Enter Your Details For Our Dating Website</h2>
+
+	<body>	
+		<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">	
+			<fieldset class="fieldset">
+				
+				<legend>Your Face</legend>
+	
+					<label for="avatar" class="label">Your Image:</label>	
+						<input type="file" id="avatar" name="avatar" required> <br>
+					<label for="previewFace" class="label">Image Preview:</label>
+						<img id="preview" src="" name="previewFace" width="200px">	
+					
+			</fieldset> <br>
+
+			<fieldset class="fieldset">
+				
+				<legend>Your General Details</legend>
+				
+					<label for="userName" class="label">Name:</label>
+						<input type="text" name="userName" placeholder="Your full name" required> <br>
+					<label for="userGender" class="label">Gender:</label> 
+						<input type="radio" name="userGender" value="male" required>Male
+						<input type="radio" name="userGender" value="female" required>Female <br>
+					<label for="userAge" class="label">Age:</label>
+						<input type="number" min="18" max="150" name="userAge" placeholder="18" required> <br>
+					<label for="userBirthday" class="label">Date of Birth:</label>
+						<input type="date" name="userBirthday" placeholder="dd/mm/yyyy"> <br>
+					<label for="userFavColor" class="label">Favorite Color:</label>
+						<input type="color" name="userFavColor"> <br>
+					<label for="userCountry" class="label">Which Country:</label>
+						<select name="userCountry">
+							<option value="us">USA</option>
+							<option value="uk">UK</option>
+							<option value="ch">China</option>
+							<option value="cd">Canada</option>
+							<option value="mx">Mexico</option>
+							<option value="no">None Listed</option>
+						</select> <br>
+					
+			</fieldset> <br>
+
+			<fieldset class="fieldset">
+				
+				<legend>Your Indicators</legend>
+
+					<label for="userHeight" class="label">Height in Inches:</label>
+						<span class="rangeText">Short</span> <input type="range" min="50" max="100" step="1" value="1" name="userHeight"> <span class="rangeText">Tall</span> <br>
+					<label for="userSalary" class="label">Yearly Salary:</label>
+						<span class="rangeText">Poor</span> <input type="range" min="0" max="100" step="5" value="5" name="userSalary"> <span class="rangeText">Rich</span> <br>
+			
+			</fieldset> <br>
+
+			<fieldset class="fieldset">
+				
+				<legend>Your Contact Information</legend>
+
+					<label for="userEmail" class="label">Email: </label>
+						<input type="email" name="userEmail" required> <br>
+					<label for="userTel" class="label">Mobile:</label>
+						<input type="tel" name="userTel"> <br>
+					<label for="userAddress" class="label">Address:</label>
+						<textarea name="userAddress" class="textArea" placeholder="Please enter your address here"></textarea> <br>
+					<label for="userContact" class="label">Method to Contact You:</label>
+						<input type="checkbox" name="userContact" value="email" class="labelChBox">Email
+						<input type="checkbox" name="userContact" value="whatsapp" class="labelChBox">Whatsapp
+						<input type="checkbox" name="userContact" value="inAppChat" class="labelChBox">In-app chat 
+						
+			</fieldset> <br>
+			
+			<input type="submit" value="Send">
+		</form>	
+
+		<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+	</body>	
+</html>
